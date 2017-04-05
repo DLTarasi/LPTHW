@@ -1,4 +1,4 @@
 # LPTHW
-Learn Python the Hard Way Excercises
+Learn Python the Hard Way Exercises
 
-This is where I am storing the excercises for Learn Python the Hardway. The excercises are in python 3. 
+This is where I am storing the exercises for Learn Python the Hardway. The exercises are in python 3.
