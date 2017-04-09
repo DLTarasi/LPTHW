@@ -1,4 +1,3 @@
-print(
 True and True,
 False and True,
 1 == 1 and 2 == 1,
@@ -18,4 +17,10 @@ not (1 != 10 or 3 == 4),
 not ("testing" == "testing" and "Zed" == "Cool Guy"),
 1 == 1 and (not ("testing" == 1 or 1 == 0)),
 "chunky" == "bacon" and (not (3 == 4 or 3 == 3)),
-3 == 3 and (not ("testing" == "testing" or "Python" == "Fun")))
+3 == 3 and (not ("testing" == "testing" or "Python" == "Fun"))
+
+
+print("test" and "test")
+print(1 and 1)
+print(True and 1)
+print(False and 1)
