@@ -12,7 +12,7 @@ def wkg_calc(twenty_min_power, weight_in_lbs):
     return(w_per_kg)
 
 ######### This block gets user inputs for each variable and assigns them
-wkg = wkg_calc(int(input("What is your 20 minute power? ")), int(input("What is your weight in pounds? ")))
+wkg = wkg_calc(int(input("What is your 20 minute power in watts? ")), int(input("What is your weight in pounds? ")))
 if wkg > 3.5:
     print(f"Your FTP is {wkg} watts per kilogram. That's pretty good. Let's see how your sprint is.")
 else:
@@ -33,25 +33,29 @@ else:
 ##########
 
 ######### Tell what current stats are and get training camp location.
-print("Great. Now we know that your FTP is {wkg} watts per kilo, and you can sprint at {sprint} watts. It's time for training camp."
+print(f"Now we know that your FTP is {wkg} watts per kilo, and you can sprint at {sprint} watts. It's time for training camp.")
 print("Where do you want to go, Flanders or Mallorca are always good options.")
 
-camp = input(": ")
+camp = input("> ")
 ########
 
 ###### adjust stats based on training camp location
-if camp == "Girona" or "girona" or "Girona." or "girona."
+girona = ["Girona", "girona", "Girona.", "girona."]
+flanders = ["Flanders", "flanders", "Flanders.", "flanders."]
+mallorca = ["Mallorca", "mallorca", "mallorca.", "Mallorca."]
+
+if camp in girona:
     print("I wouldn't have thought of that, but its a great idea!")
     sprint += 150
     wkg += .3
-elif camp == "Flanders" or "flanders" or "Flanders." or "flanders.":
+elif camp in flanders:
     print("Great. Hope you like cobbles!")
     sprint += 100
-elif camp == "Mallorca" or "mallorca" or "mallorca." or "Mallorca.":
+elif camp in mallorca:
     print("Great. There is no where better to learn to climb.")
     wkg += .25
 else:
-    print(f"Fine, we can train at {camp}, but I don't think it's the best option.)
+    print(f"Fine, we can train in {camp}, but I don't think it's the best option.")
 ########
 
 ####### Flanders Training Camp
