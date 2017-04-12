@@ -7,7 +7,7 @@ def gold_room():
     if choice.isnumeric() : #checks whether input is a number
         how_much = int(choice)
     else:
-        dead("Man, learn to type a number.") #BUG if an int is input that doesn't include a 0 or 1, this will trigger when it shouldnt.
+        dead("Man, learn to type a number.") 
 
     if how_much < 50:
         print("Nice, you're not greedy. You win!")
