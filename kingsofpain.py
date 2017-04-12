@@ -1,4 +1,6 @@
 def tuscanycamp():
+    global wkg
+    global sprint
     print("You just landed in the beatiful green hills of Tuscany. How do you want to spend your time at camp?")
     print("You could train your FTP on the strade bianche, work on your sprint on the street of San Remo, or just sit around and eat pasta.")
     train = input("> ")
@@ -12,13 +14,15 @@ def tuscanycamp():
         campsuccess()
     elif "eat" in train or "sit" in train or "pasta" in train:
         print("That's not a good idea, but pasta is hard to resist! Try the cacio e pepe.")
-        wkg -= .25
+        wkg -= .4
         campfail()
     else:
         print(f"Okay, we can {train}, but I don't think it will help.")
         campneutral()
 
 def flanderscamp():
+    global wkg
+    global sprint
     print("You just landed in Flanders. Unsurprisingly, it's overcast, cold, and wet. Why did we come here again? Well, we need to train anyway. How do you want to spend your time at camp?")
     print("You could train your FTP on the cobbles, work on your sprint on the Koppenberg, or just sit around and eat frites.")
     train = input("> ")
@@ -39,6 +43,8 @@ def flanderscamp():
         campneutral()
 
 def mallorcacamp():
+    global wkg
+    global sprint
     print("You just landed on the sunny island of Mallorca. Why did we ever consider Flanders? How do you want to spend your time at camp?")
     print("You could train your FTP on the Sa Colabra, work on your sprint on the short climb up Coll de sa Creu, or just sit around and eat tapas.")
     train = input("> ")
@@ -59,6 +65,8 @@ def mallorcacamp():
         campneutral()
 
 def othercamp():
+    global wkg
+    global sprint
     print("How do you want to spend your time at camp?")
     print("You could train your FTP on a long climb, work on your sprint on short hills, or just sit around and eat doughnuts.")
     train = input("> ")
@@ -110,7 +118,7 @@ def tdf():
 
 def roubaix():
     print("Roubaix")
-    
+
 #intro
 print("It's the start of another hard offseason of training.")
 print("Your goal is to win your race of choice, either the Tour de France or Paris-Roubaix.")
