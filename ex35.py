@@ -4,7 +4,7 @@ def gold_room():
     print("This room is full of gold. How much do you take?")
 
     choice = input("> ")
-    if "0" in choice or "1" in choice: #checks whether input includes 0 or 1
+    if choice.isnumeric() : #checks whether input is a number
         how_much = int(choice)
     else:
         dead("Man, learn to type a number.") #BUG if an int is input that doesn't include a 0 or 1, this will trigger when it shouldnt.
