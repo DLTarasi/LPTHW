@@ -4,10 +4,10 @@ def gold_room():
     print("This room is full of gold. How much do you take?")
 
     choice = input("> ")
-    if "0" in choice or "1" in choice:
+    if "0" in choice or "1" in choice: #checks whether input includes 0 or 1
         how_much = int(choice)
     else:
-        dead("Man, learn to type a number.")
+        dead("Man, learn to type a number.") #BUG if an int is input that doesn't include a 0 or 1, this will trigger when it shouldnt.
 
     if how_much < 50:
         print("Nice, you're not greedy. You win!")
@@ -23,7 +23,7 @@ def bear_room():
     print("How are you going to move the bear?")
     bear_moved = False
 
-    while True:
+    while True: #creates infinite loop
         choice = input("> ")
 
         if choice == "take honey":
@@ -46,7 +46,7 @@ def cthulu_room():
     print("Do you flee for your life or eat your head?")
 
     choice = input("> ")
-
+#lines below check wether user input contains either string. If it contains both string, first option triggers
     if "flee" in choice:
         start()
     elif "head" in choice:
