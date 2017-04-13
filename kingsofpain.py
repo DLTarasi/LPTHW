@@ -1,3 +1,9 @@
+def wkg_calc(twenty_min_power, weight_in_lbs):
+    ftp = round(twenty_min_power * .95)
+    weight_in_kg = round(weight_in_lbs / 2.2, 2)
+    w_per_kg = round(ftp / weight_in_kg, 2)
+    return(w_per_kg)
+
 def tuscanycamp():
     global wkg
     global sprint
@@ -190,14 +196,6 @@ def roubaix():
 print("It's the start of another hard offseason of training.")
 print("Your goal is to win your race of choice, either the Tour de France or Paris-Roubaix.")
 print("First, we should determine your current fitness. We'll need to know your power over a few different intervals and your weight.")
-
-
-# function to calculate ftp
-def wkg_calc(twenty_min_power, weight_in_lbs):
-    ftp = round(twenty_min_power * .95)
-    weight_in_kg = round(weight_in_lbs / 2.2, 2)
-    w_per_kg = round(ftp / weight_in_kg, 2)
-    return(w_per_kg)
 
 ######### This block gets user inputs for each variable and assigns them
 wkg = wkg_calc(int(input("What is your 20 minute power in watts? ")), int(input("What is your weight in pounds? ")))
